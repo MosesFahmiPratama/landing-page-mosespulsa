@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DaftarProdukPage</title>
+	<meta name="author" content="Moses Fahmi Pratama">
+	<link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1 class="title">MosesPulsa</h1>
+			<nav class="navigasi">
+				<ul>
+					<li><a href="./home.html" >Home</a></li>
+					<li><a href="./layanan.html" >Layanan</a></li>
+					<li><a href="./daftar-produk.html"  >Daftar Produk</a></li>
+					<li><a href="./tentang.html" >Tentang</a></li>
+				</ul>
+			</nav>
+			<div class="menu-bar">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</header>
+
+		<section class="intro-daftar-produk">
+			<div class="container__content-daftar-produk">
+				<div class="text__content-daftar-produk">
+					<p>
+						Silahkan cek dibawah ini untuk 
+						daftar produk pulsa yang kami jual
+					</p>
+					<div class="img">
+						<svg width="129" height="172" viewBox="0 0 129 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 2C1 2 77 52 77 168L23 120" stroke="black" stroke-width="3"/>
+							<path d="M79 166L127 118" stroke="black" stroke-width="3"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="img__content-daftar-produk">
+				<img src="../public/img/bg/bg-daftar-produk.svg" alt="">
+			</div>
+		</section>
+		<section class="daftar-produk">
+			<div class="box-content-daftar-produk">
+				<div class="text-head-box">
+					<h1>Daftar Produk</h1>
+				</div>
+				<div class="form-cek">
+						<select id="cek-produk">
+						<?php 
+							foreach ($data_produk->data as $key) {
+						?>
+							<option value="<?= $key->id; ?>"><?= $key->name; ?></option>
+						<?php
+							}
+						?>
+						</select>
+				</div>
+				<div class="table-produk">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="1">Provider</th>
+								<th></th>
+								<th>Katerangan</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+					<div class="provider">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p>All right Reserved by MosesPulsa</p>
+		</footer>
+	</div>
+
+<script src="../public/js/bliss.js"></script>
+<script src="../public/js/script.js"></script>
+</body>
+</html>

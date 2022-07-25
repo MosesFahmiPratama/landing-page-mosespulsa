@@ -1,0 +1,54 @@
+.body-content > .data-content > .table > table {
+	border-radius: 20px;
+	box-shadow: 4px 10px 15px #ececf6;
+}
+
+.body-content > .data-content > .table > table tr th {
+	background-color: rgba(250, 250, 250, .7);
+	box-shadow: 1px 3px 6px #ececf6;
+}
+
+.body-content > .data-content > .table > table tbody tr {
+	background: #EEEEEE;
+}
+@media (max-width: 768px){
+	.body-content > .data-content > .table > table thead {
+		display: none;
+	}
+	.body-content > .data-content > .table > table, 
+	.body-content > .data-content > .table > table tbody, 
+	.body-content > .data-content > .table > table tr, 
+	.body-content > .data-content > .table > table td {
+		display: block;
+		width: 100%;
+	}
+	.body-content > .data-content > .table > table tr {
+		margin-bottom: 15px;
+		padding: 15px;
+		background-color: rgba(250, 250, 250, .7);
+		box-shadow: 1px 3px 6px #ececf6;
+	}
+	.body-content > .data-content > .table > table tbody tr td{
+		text-align: right;
+		padding-left: 50%;
+		position: relative;
+		border-bottom: 1px solid #C8C8C8;
+	}
+	.body-content > .data-content > .table > table td:before{
+		content: attr(data-label);
+		position: absolute;
+		left: 0;
+		font-weight: 600;
+		font-size: 14px;
+		text-align: left;
+	}
+	.body-content > .data-content > .table > table td:nth-child(4) {
+		height: 50px;
+	}
+}
+
+@media (max-width: 420px) {
+	.body-content > .data-content > .table > table td:nth-child(4) {
+		height: 70px;
+	}	
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HomePage</title>
+	<meta name="author" content="Moses Fahmi Pratama">
+	<link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1 class="title">MosesPulsa</h1>
+			<nav class="navigasi">
+				<ul>
+					<li><a href="./home.html" >Home</a></li>
+					<li><a href="./layanan.html" >Layanan</a></li>
+					<li><a href="./daftar-produk.html"  >Daftar Produk</a></li>
+					<li><a href="./tentang.html" >Tentang</a></li>
+				</ul>
+			</nav>
+			<div class="menu-bar">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</header>
+		
+		<section class="intro">
+			<div class="container-intro">
+				<div class="box-intro">
+					<h2 class="head-text-intro">Yuk Isi Pulsa Dengan Mudah Hanya Dengan MosesPulsa</h2>
+					<p class="text-intro">Website terbaik dengan harga pulsa termurah yang bisa kamu dapatkan di MosesPulsa</p>
+					<div class="buttons-intro">
+						<a href="<?= base_url('/login') ?>"><button class="button-login">Masuk</button></a>
+						<a href="<?= base_url('/daftar-produk') ?>"><button class="button-cek">Cek Produk</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="image-intro">
+				<img src="../public/img/bg/bg-1.svg" alt="">
+			</div>
+		</section>
+		<section class="cek-pulsa">
+			<p class="text-head__cek-pulsa">Yuk Cek Harga Pulsanya Dibawah Ini !</p>
+			<div class="content-cek-pulsa">
+				<div class="info-cek-pulsa">
+					<div class="info-pembelian">
+						Pembelian
+					</div>
+				</div>
+				<div class="box-cek-pulsa">
+					<div class="text-title__box-cek-pulsa">
+						<img src="../public/img/logo/hp.svg" alt="">
+						<h3>Pulsa</h3>
+					</div>
+					<form action="" class="form-cek-pulsa">
+						<div class="form-group">
+							<label for="kartu-perdana">Katu Perdana</label>
+							<select id="nama-operator" onchange="get_operator()">
+								<?php 
+									foreach($data_operator->data as $value){
+								?>
+									<option value="<?= $value->id; ?>"><?= $value->name; ?></option>
+								<?php		
+									}
+								?>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="jenis-pulsa">Jenis Pulsa</label>
+							<input type="text" id="jenis-pulsa" value="Prabayar" />
+						</div>
+						<div class="form-group">
+							<label for="pulsa-diinginkan">Pulsa Yang Diinginkan</label>
+							<select name="" id="harga-pulsa">
+								
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="harga">Harga</label>
+							<input type="text" id="harga" class="" readonly />
+						</div>
+						<div class="form-group">
+							<div class="button-submit">
+								Beli
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="metode-bayar">
+			<div class="text-head__metode-bayar">
+				<h3>Ada Banyak Ragam Metode Pembayaran</h3>
+			</div>
+			<div class="content-metode-bayar">
+				<img src="../public/img/bg/bg-2.svg" alt="">
+				<p>Yap, di MosesPulsa tersedia banyak metode pembayaran yang dapat kamu gunakan, baik itu di BANK maupun e-wallet yang kamu miliki.</p>
+			</div>
+			<div class="content-bank">
+				<div class="img-bank"><img src="../public/img/bank2/bank-bca.svg" alt=""></div>
+				<div class="img-bank"><img src="../public/img/bank2/bank-bni.svg" alt=""></div>
+				<div class="img-bank"><img src="../public/img/bank2/bank-bri.svg" alt=""></div>
+				<div class="img-bank"><img src="../public/img/bank2/bank-mandiri.svg" alt=""></div>
+				<div class="img-bank"><img src="../public/img/ewallet2/logo-dana.svg" alt=""></div>
+				<div class="img-bank"><img src="../public/img/ewallet2/logo-gopay.svg" alt=""></div>
+				<div class="img-bank"><img src="../public/img/ewallet2/logo-ovo.svg" alt=""></div>
+			</div>
+		</section>
+
+		<footer>
+			<p>All right Reserved by MosesPulsa</p>
+		</footer>
+	</div>
+
+<script src="../public/js/bliss.js"></script>
+<script src="../public/js/script.js"></script>
+</body>
+</html>
